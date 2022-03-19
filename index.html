@@ -1,36 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Momentum</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Welcome</title>
 </head>
-<body>
-  <form class="hidden" id="login-form">
-    <input required maxlength="15" type="text" placeholder="What is your name?" />
-    <button>Log In</button>
-  </form>
-  <h2 id="clock">00:00:00</h2>
-  <h1 id="greeting" class="hidden"></h1>
-  <form id="todo-form">
-    <input required type="text" placeholder="Write a To Do and Press Enter:)">
-  </form>
-  <ul id="todo-list"></ul>
-  <div id="quote">
-    <span></span>
-    <span></span>
+
+<body id="bg-img">
+
+  <!--     
+  <div class="title-bar">
+    <div class="traffic-lights">
+      <span class="light-red"></span>
+      <span class="light-yellow"></span>
+      <span class="light-green"></span>
+    </div>
+  </div> -->
+
+  <!-- 로그인 -->
+  <!-- 로그인 안 했을 때 -->
+  <div class="header">
+    <form class="hidden" id="login-form">
+      <h1 class="highlight">What should I call you?</h1>
+      <input required maxlength="15" type="text" placeholder="input here!" class="input" />
+      <button class="input-btn">✓</button>
+    </form>
+
+    <!-- 로그인 했을 때 -->
+    <h2 id="greeting" class="hidden highlight"></h2>
   </div>
-  <div id="weather">
-    <span></span>
-    <span></span>
+
+
+  <div class="row">
+
+    <!-- 시계 -->
+    <div class="column-1">
+      <h2 id="clock">00:00:00</h2>
+
+
+      <!-- 날씨 -->
+      <div id="weather">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+
+    <!-- 투두 -->
+    <div class="column-2">
+      <form id="todo-form">
+        <input required type="text" placeholder="Write a To Do and Press Enter :)">
+      </form>
+      <ul id="todo-list"></ul>
+    </div>
   </div>
-    <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
-    <script src="js/weather.js"></script>
+
+
+  <div class="window_frame">
+    <div class="title_bar">
+      <div class="window_title">To. You</div>
+      <div class="traffic-lights">
+        <div class="light-red">
+        </div>
+        <div class="light-yellow">
+        </div>
+        <div class="light-green">
+        </div>
+      </div>
+    </div>
+
+    <div class="quotes_frame">
+      <div id="quote">
+        <p class="quotes-quote"></p>
+        <p class="quotes-author"></p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 자바스크립트 -->
+  <script src="js/greeting.js"></script>
+  <script src="js/clock.js"></script>
+  <script src="js/quotes.js"></script>
+  <script src="js/background.js"></script>
+  <script src="js/todo.js"></script>
+  <script src="js/weather.js"></script>
 </body>
+
 </html>

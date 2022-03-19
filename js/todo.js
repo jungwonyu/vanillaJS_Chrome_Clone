@@ -47,12 +47,8 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
-if (saveToDos != null) {
+if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo); // forEach가 실행되면 paintToDo를 부름
 }
-
-// 지우고 싶은 item 제외 filter() 함수 사용
-
-function sexyFilter() {}

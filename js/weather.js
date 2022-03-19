@@ -1,6 +1,7 @@
-const weather = document.querySelector("#weather span:first-child");
-const city = document.querySelector("#weather span:last-child");
 const API_KEY = "bd34c67fb19eea790e4b2fa056722035";
+const city = document.querySelector("#weather span:nth-child(1)");
+const weather = document.querySelector("#weather span:nth-child(2)");
+const temp = document.querySelector("#weather span:nth-child(3)");
 
 function onGeoOk(position) {
   const lat = position.coords.latitude;
@@ -9,8 +10,9 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      city.innerText = data.name; // 도시 이름
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`; // 날씨, 온도
+      city.innerText = `도시는?  ${data.name}`; // 도시 이름
+      weather.innerText = `날씨는?  ${data.weather[0].main}`;
+      temp.innerText = `온도는?  ${data.main.temp}`; // 날씨, 온도
     });
 }
 

@@ -1,6 +1,7 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+// const greeting_content = document.querySelector("#greeting content");
 
 // 반복되는 경우에는 변수로 만들어줌 -> 중요한 변수가 아니기 때문에 대문자로 구별해줌
 const HIDDEN_CLASSNAME = "hidden";
@@ -18,6 +19,7 @@ loginForm.addEventListener("submit", onLoginSubmit); // submit을 했을 때 JS�
 
 function paintGreetings(username) {
   greeting.innerHTML = `Hello! ${username} 🎈`; // Hello! 라는 text와 user가 입력하여 저장된 이름 username을 나타내줌
+  // greeting_content.innerHTML = 랄라룰루;
   greeting.classList.remove(HIDDEN_CLASSNAME); // class name에 있는 hidden을 삭제
 }
 
