@@ -10,15 +10,15 @@ function onGeoOk(position) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      city.innerText = `도시는?  ${data.name}`; // 도시 이름
-      weather.innerText = `날씨는?  ${data.weather[0].main}`;
-      temp.innerText = `온도는?  ${data.main.temp}`; // 날씨, 온도
+      city.innerText = `${data.name}`; // 도시 이름
+      weather.innerText = `${data.weather[0].main}`;
+      temp.innerText = `${data.main.temp}`; // 날씨, 온도
     });
 }
 
 function onGeoError() {
   // 에러가 났을 때 실행될 함수
-  alert("Can't find you. No weather for you.");
+  alert("Can't find you. No weather for you. 🥲");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

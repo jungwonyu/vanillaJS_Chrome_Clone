@@ -23,7 +23,7 @@ function paintToDo(newTodo) {
   const span = document.createElement("span"); // span을 만들었음
   span.innerText = newTodo.text; // 텍스트를 span 내부에 넣음(span안에 넣은 새로운 텍스트는 사용자가 form에서 입력한 newTodo 값)
   const button = document.createElement("button"); // button 만들기
-  button.innerText = "❌"; // 버튼에 x라는 text 넣기
+  button.innerText = "✖️"; // 버튼에 x라는 text 넣기
   button.addEventListener("click", deleteToDo);
   li.appendChild(span); // span을 li 내부에 넣기
   li.appendChild(button); // button을 li 내부에 넣기

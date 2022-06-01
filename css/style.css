@@ -1,166 +1,165 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+KR:wght@500&family=Pacifico&display=swap");
-
-/* common */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&famil=Open+Sans&display=swap');
 
 body {
-  text-align: center;
-  color: #ffd60a;
-  background-size: cover;
-  background-repeat: no-repeat;
+  margin:0;
+  padding:0;
   width: 100%;
   height: 100%;
-  font-family: "Noto Sans", sans-serif, "Noto Sans KR", sans-serif, "Pacifico",
-    sans-serif;
-}
 
-.highlight {
-  font-family: "Pacifico", sans-serif, "Noto Sans KR", sans-serif;
-  letter-spacing: 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  font-family: 'IBM Plex Sans KR', sans-serif,'Open Sans', sans-serif;
+  text-align: center;
+  align-items: center;
+  color: #ffd60a;
 }
 
 .hidden {
   display: none;
 }
 
-/* login */
+.text-white {
+  color: white;
+  font-weight: bold;
+}
+
+/* 헤더 */
+
 .header {
-  padding: 20px;
+  height: 30px;
+  margin: 50px;
+}
+
+/* 음악 */
+.audio {
+  float: left;
+}
+
+.audio-form {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+/* 시계 */
+#clock {
+  font-size: 20px;
+  margin-top: -2px;
+  letter-spacing: 15px;
+  text-shadow: 2px 1px white;
+  font-weight: 900;
+  float: right;
+}
+/* 헤드 끝 */
+
+/* 바디 */
+/* 날짜 */
+#date {
+  font-size: 20px;
+  font-weight: 700;
   text-align: center;
+  letter-spacing: 15px;
+}
+
+/* 날씨 */
+#weather {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* 로그인 */
+.login {
+  padding: auto;
+  margin-bottom: 50px;
+}
+
+#greeting {
+  font-size: 30px;
 }
 
 .input {
+  height: 40px;
+  width: 200px;
+
+  margin-right: 15px;
+
   border: 2px solid #ffd60a;
   border-radius: 5px;
-  height: 30px;
-  width: 200px;
-  font-family: "Noto Sans", sans-serif, "Noto Sans KR", sans-serif;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
+
+  text-align: center;
 }
 
 .input-btn {
-  height: 30px;
+  height: 35px;
   width: 30px;
+
   border: 2px solid #ffd60a;
   border-radius: 5px;
   background-color: #ffd60a;
+
   color: black;
-}
 
-/* quotes */
-
-.quotes_frame {
-  color: black;
-  margin-top: 40px;
-}
-
-.quotes-quote {
   font-size: 18px;
 }
 
-.quotes-author {
-  font-size: 15px;
+
+/* 투두 */
+.todo {
+  padding: auto;
+  margin-bottom: 50px;
 }
 
-.column-1 {
-  float: left;
-  width: 40%;
-  padding: 10px;
-  height: 450px;
+.text-highlight {
+  font-size: 20px;
 }
 
-.column-2 {
-  float: right;
-  width: 54%;
-  padding: 10px;
-  height: 450px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* window */
-.window_frame {
-  width: 1000px;
-  height: 120px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border: 0.5px solid rgba(0, 0, 0, 0.12);
-  backdrop-filter: blur(2px);
-  border-radius: 10px;
-}
-
-.window_title {
-  position: absolute;
-  width: 140px;
-  height: 16px;
-  left: calc(50% - 140px / 2);
-  top: 6px;
-
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 16px;
-
-  /* identical to box height */
-  align-items: center;
+#todo-list {
+  font-weight: bold;
   text-align: center;
-  letter-spacing: -0.004em;
-  color: #3d3d3d;
+  list-style: circle;
 }
 
-.title_bar {
-  position: absolute;
-  height: 28px;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  background: #ffffff;
-  box-shadow: 0px 0.5px 0px rgba(0, 0, 0, 0.15),
-    inset 0px -0.5px 0px rgba(0, 0, 0, 0.05);
-  border-radius: 10px 10px 0px 0px;
+#todo-list li{
+  margin: 0 200px;
 }
 
-.traffic-lights {
-  position: absolute;
-  width: 52px;
-  height: 12px;
-  left: 8px;
-  top: 8px;
+#todo-list li button{
+  float:right;
+  border : none;
+  background-color: #ffd60a;
+  color: white;
+  border-radius: 20%;
 }
 
-.light-red {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  left: 0px;
-  top: 0px;
-  background: #ec6a5e;
-  border: 0.5px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  border-radius: 20px;
+/* 명연 */
+.quote-frame {
+  clear: both;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.light-yellow {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  left: 20px;
-  top: 0px;
-  background: #f5bf4f;
-  border: 0.5px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  border-radius: 20px;
+.quotes-quote {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.light-green {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  left: 40px;
-  top: 0px;
-  background: #61c554;
-  border: 0.5px solid rgba(0, 0, 0, 0.12);
-  box-sizing: border-box;
-  border-radius: 20px;
+.quotes-author {
+  font-size: 16x;
 }
+
+.footer {
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+
+
+

@@ -1,4 +1,4 @@
-const clock = document.querySelector("h2#clock");
+const clock = document.querySelector("h3#clock");
 
 function getClock() {
   const date = new Date(); // 현재 시간을 알려줌

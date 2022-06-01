@@ -1,1 +1,1 @@
-# Google Chrome Clone Cording with Vanilla JS
+# Google Chrome Clone Coding with Vanilla JS

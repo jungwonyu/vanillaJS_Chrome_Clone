@@ -5,90 +5,85 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/icon/favicon.png">
   <link rel="stylesheet" href="css/style.css">
-  <title>Welcome</title>
+  <title>w e l c o m e ₊✧⁎˚</title>
 </head>
 
 <body id="bg-img">
 
-  <!--     
-  <div class="title-bar">
-    <div class="traffic-lights">
-      <span class="light-red"></span>
-      <span class="light-yellow"></span>
-      <span class="light-green"></span>
-    </div>
-  </div> -->
-
-  <!-- 로그인 -->
-  <!-- 로그인 안 했을 때 -->
+  <!-- header -->
   <div class="header">
+    <!-- audio -->
+    <div class="audio">
+      <input type="button" onclick="audio.play();" value="🎵" class="audio-form">
+      <input type="button" onclick="audio.pause();" value="⏸" class="audio-form">
+    </div>
+
+    <!-- clock -->
+    <h3 id="clock">00:00:00</h3>
+  </div>
+
+  <!-- body -->
+  <!-- date -->
+  <h3 id="date">000000</h3>
+  <!-- weather -->
+  <div id="weather">
+    이곳은 <span class="text-white"></span>,
+    날씨는 <span class="text-white"></span>,
+    온도는 <span class="text-white"></span>˚
+  </div>
+
+  <!-- login -->
+  <div class="login">
+
+    <!-- state:x_login -->
     <form class="hidden" id="login-form">
-      <h1 class="highlight">What should I call you?</h1>
-      <input required maxlength="15" type="text" placeholder="input here!" class="input" />
+      <h1>What should I call you?</h1>
+      <input required maxlength="15" type="text" placeholder="Write Your Nickname :)" class="input" />
       <button class="input-btn">✓</button>
     </form>
 
-    <!-- 로그인 했을 때 -->
-    <h2 id="greeting" class="hidden highlight"></h2>
+    <!-- state:login -->
+    <h1 id="greeting" class="hidden"></h1>
   </div>
 
 
-  <div class="row">
+  <!-- todo -->
+  <div class="todo">
+    <p class="text-highlight">✏️ Write a To-do •°. *࿐</p>
 
-    <!-- 시계 -->
-    <div class="column-1">
-      <h2 id="clock">00:00:00</h2>
+    <form id="todo-form">
+      <input required type="text" placeholder="Write a To Do and Press Enter :)" class="input">
+    </form>
 
-
-      <!-- 날씨 -->
-      <div id="weather">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-
-
-    <!-- 투두 -->
-    <div class="column-2">
-      <form id="todo-form">
-        <input required type="text" placeholder="Write a To Do and Press Enter :)">
-      </form>
-      <ul id="todo-list"></ul>
-    </div>
+    <ul id="todo-list">
+    </ul>
   </div>
 
-
-  <div class="window_frame">
-    <div class="title_bar">
-      <div class="window_title">To. You</div>
-      <div class="traffic-lights">
-        <div class="light-red">
-        </div>
-        <div class="light-yellow">
-        </div>
-        <div class="light-green">
-        </div>
-      </div>
-    </div>
-
-    <div class="quotes_frame">
-      <div id="quote">
-        <p class="quotes-quote"></p>
-        <p class="quotes-author"></p>
-      </div>
-    </div>
+  <!-- quote -->
+  <div id="quote" class="quote-frame">
+    <span class="quotes-quote"></span>
+    <span class="quotes-author"></span>
   </div>
 
+  <!-- footer -->
+  <div class="footer">
+    <p>ⓒ 2022. JungwonYu.</p>
+  </div>
+
+  </div>
+  </div>
 
   <!-- 자바스크립트 -->
   <script src="js/greeting.js"></script>
   <script src="js/clock.js"></script>
+  <script src="js/date.js"></script>
   <script src="js/quotes.js"></script>
   <script src="js/background.js"></script>
   <script src="js/todo.js"></script>
   <script src="js/weather.js"></script>
+  <script src="js/audio.js"></script>
 </body>
 
 </html>
