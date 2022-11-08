@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&famil=Open+Sans&display=swap');
 
 body {
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
 
@@ -10,7 +10,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
 
-  font-family: 'IBM Plex Sans KR', sans-serif,'Open Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-align: center;
   align-items: center;
   color: #ffd60a;
@@ -35,6 +35,8 @@ body {
 /* 음악 */
 .audio {
   float: left;
+  display: flex;
+  gap: 10px;
 }
 
 .audio-form {
@@ -42,7 +44,7 @@ body {
   width: 40px;
   font-size: 20px;
   border-radius: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.5);
   border-color: white;
 }
 
@@ -76,7 +78,7 @@ body {
 
 /* 로그인 */
 .login {
-  padding: auto;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -84,11 +86,9 @@ body {
   font-size: 30px;
 }
 
-.input {
+.input-form {
   height: 40px;
   width: 200px;
-
-  margin-right: 15px;
 
   border: 2px solid #ffd60a;
   border-radius: 5px;
@@ -110,40 +110,66 @@ body {
   font-size: 18px;
 }
 
-
 /* 투두 */
 .todo {
   padding: auto;
-  margin-bottom: 50px;
+  margin: 0 auto;
+  width: 30%;
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+
+  align-items: center;
+  justify-content: center;
+
+  color: white;
 }
 
 .text-highlight {
   font-size: 20px;
+  font-weight: bold;
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #todo-list {
   font-weight: bold;
   text-align: center;
-  list-style: circle;
+  list-style: '✔️';
 }
 
-#todo-list li{
-  margin: 0 200px;
+#todo-list li span {
+  margin-left: 20px;
 }
 
-#todo-list li button{
-  float:right;
-  border : none;
+#todo-list li button {
+  border: none;
   background-color: #ffd60a;
   color: white;
   border-radius: 20%;
+  margin-left: 20px;
 }
 
 /* 명연 */
 .quote-frame {
-  clear: both;
-  text-align: center;
-  margin-bottom: 30px;
+  width: 100vw;
+  height: 20vh;
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .quotes-quote {
@@ -155,11 +181,13 @@ body {
   font-size: 16x;
 }
 
+/* 바디 끝 */
 .footer {
-  text-align: center;
-  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 50px;
+
   color: white;
 }
-
-
-
